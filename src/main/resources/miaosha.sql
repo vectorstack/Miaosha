@@ -11,7 +11,7 @@
  Target Server Version : 50637
  File Encoding         : 65001
 
- Date: 19/07/2018 21:12:53
+ Date: 20/07/2018 18:42:27
 */
 
 SET NAMES utf8mb4;
@@ -61,7 +61,7 @@ CREATE TABLE `miaosha_order`  (
 -- ----------------------------
 DROP TABLE IF EXISTS `miaosha_user`;
 CREATE TABLE `miaosha_user`  (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` bigint(11) NOT NULL AUTO_INCREMENT,
   `nickname` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
   `password` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `salt` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
@@ -70,7 +70,12 @@ CREATE TABLE `miaosha_user`  (
   `lastLogin_date` date NOT NULL,
   `login_count` int(255) NOT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 2147483648 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of miaosha_user
+-- ----------------------------
+INSERT INTO `miaosha_user` VALUES (13145912203, 'vector', 'b7797cce01b4b131b433b6acf4add449', '1a2b3c4d', '', '2018-07-20', '2018-07-20', 0);
 
 -- ----------------------------
 -- Table structure for order_info
